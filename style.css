@@ -154,13 +154,18 @@ a:hover {
     cursor: pointer;
     background-size: 200% 100%;
     background-position: 0 50%;
-    transition: background-position 0.35s ease, color 0.2s, border-color 0.2s;
+    transition: background-position 0.35s ease, background-color 0.2s ease,
+        color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(157, 78, 221, 0.35);
 }
 
 .btn--primary {
-    background: var(--clr-accent-gradient);
+    background-image: var(--clr-accent-gradient);
     color: #fff;
-    border: 2px solid transparent;
 }
 
 .btn--primary:hover {
@@ -169,14 +174,13 @@ a:hover {
 }
 
 .btn--outline {
-    background: transparent;
+    background-color: transparent;
     color: var(--clr-accent);
     border: 2px solid var(--clr-accent);
 }
 
 .btn--outline:hover {
-    background: var(--clr-accent-gradient);
-    background-position: 100% 50%;
+    background-color: var(--clr-accent-end);
     color: #fff;
 }
 
